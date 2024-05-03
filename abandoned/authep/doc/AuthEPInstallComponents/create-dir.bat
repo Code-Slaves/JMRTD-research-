@@ -1,1 +1,0 @@
-Cscript.exe adsutil.vbs CREATE W3SVC/1/Root/MyVdir "IIsWebVirtualDir"
