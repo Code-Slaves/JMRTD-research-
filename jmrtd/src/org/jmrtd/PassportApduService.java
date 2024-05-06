@@ -86,13 +86,13 @@ public class PassportApduService extends CardService {
 
 	private static final Provider BC_PROVIDER = JMRTDSecurityProvider.getBouncyCastleProvider();
 
-	/** The applet we select when we start a session. */
+	/** Апплет, который мы выбираем, когда начинаем сеанс. */
 	protected static final byte[] APPLET_AID = { (byte) 0xA0, 0x00, 0x00, 0x02, 0x47, 0x10, 0x01 };
 
-	/** Initialization vector used by the cipher below. */
+	/** Вектор инициализации, используемый шифром ниже. */
 	private static final IvParameterSpec ZERO_IV_PARAM_SPEC = new IvParameterSpec(new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 });
 
-	/** The general Authenticate command is used to perform the PACE protocol. See Section 3.2.2 of SAC-TR 1.01. */
+	/** Общая команда Authenticate используется для выполнения протокола PACE. См. раздел 3.2.2 SAC-TR 1.01. */
 	private static final byte INS_PACE_GENERAL_AUTHENTICATE = (byte)0x86;
 
 	/** The service we decorate. */
